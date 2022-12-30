@@ -286,14 +286,11 @@ open class DKImagePickerController: DKUINavigationController, DKImageBaseManager
     
     @objc open func dismiss() {
         self.cancelCurrentExportRequestIfNeeded()
+        self.didCancel?()
         
-        self.presentingViewController?.dismiss(animated: true, completion: {
-            self.didCancel?()
-            
-            if self.isInlineCamera {
-                self.needShowInlineCamera = true
-            }
-        })
+        if self.isInlineCamera {
+            self.needShowInlineCamera = true
+        }
     }
     
     private var exportRequestID = DKImageAssetExportInvalidRequestID
@@ -329,13 +326,7 @@ open class DKImagePickerController: DKUINavigationController, DKImageBaseManager
             }
         }
         
-        if self.inline {
-            exportBlock()
-        } else {
-            self.presentingViewController?.dismiss(animated: true, completion: {
-                exportBlock()
-            })
-        }
+        exportBlock()
     }
     
     /// Reload this picker with a new DKImageGroupDataManager.
