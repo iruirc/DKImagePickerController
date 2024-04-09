@@ -12,6 +12,7 @@ let package = Package(
     products: [
         .library(
             name: "DKImagePickerController",
+            type: .dynamic,
             targets: ["DKImagePickerController"]),
     ],
     dependencies: [
