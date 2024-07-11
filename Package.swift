@@ -16,9 +16,9 @@ let package = Package(
             targets: ["DKImagePickerController"]),
     ],
     dependencies: [
-        .package(url: "https://github.com/iruirc/DKCamera.git", branch: "VSDC"),
-        .package(url: "https://github.com/iruirc/DKPhotoGallery.git", branch: "VSDC"),
-        .package(url: "https://github.com/iruirc/TOCropViewController.git", branch: "VSDC"),
+        .package(url: "https://github.com/iruirc/DKCamera.git", exact: "1.6.700"),
+        .package(url: "https://github.com/iruirc/DKPhotoGallery.git", exact: "0.0.100"),
+        .package(url: "https://github.com/iruirc/TOCropViewController.git", exact: "2.7.200"),
     ],
     targets: [
         .target(
