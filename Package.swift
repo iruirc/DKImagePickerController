@@ -18,7 +18,7 @@ let package = Package(
     dependencies: [
         .package(url: "https://github.com/iruirc/DKCamera.git", exact: "1.6.700"),
         .package(url: "https://github.com/iruirc/DKPhotoGallery.git", exact: "0.0.100"),
-        .package(url: "https://github.com/iruirc/TOCropViewController.git", exact: "2.7.200"),
+        .package(url: "https://github.com/iruirc/TOCropViewController.git", exact: "2.7.201"),
     ],
     targets: [
         .target(
